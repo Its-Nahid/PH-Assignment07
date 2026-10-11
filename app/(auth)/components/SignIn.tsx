@@ -2,10 +2,13 @@
 
 import { Button, FieldError, Fieldset, Form, Input, Label, Surface, TextField, toast } from "@heroui/react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { authClient } from "@/app/lib/auth-client";
 import SocialAuth from "./SocialAuth";
 
 export function SignIn() {
+    const router = useRouter();
+
     return (
         <div className="flex items-center justify-center rounded-2xl bg-base-100 border border-base-300 p-6">
             <Surface className="w-full">
@@ -13,7 +16,7 @@ export function SignIn() {
                     e.preventDefault();
                     const formData = new FormData(e.currentTarget);
                     const user = Object.fromEntries(formData.entries()) as
-                        { name: string, email: string, password: string };
+                        { email: string, password: string };
                     const { data, error } = await authClient.signIn.email({
                         ...user,
                         callbackURL: "/"
@@ -22,9 +25,10 @@ export function SignIn() {
                         toast.success("সাইন-ইন সফল হয়েছে", {
                             description: "আপনি এখন বিস্তারিত দেখতে পারবেন",
                         });
+                        router.push("/");
+                        router.refresh();
                     }
                     if (error) {
-
                         toast.danger("সাইন-ইন সফল হয়নি", {
                             description: error.message
                         });
@@ -40,24 +44,11 @@ export function SignIn() {
                             </TextField>
                             <TextField
                                 isRequired
-                                minLength={8}
                                 name="password"
                                 type="password"
-                                validate={(value) => {
-                                    if (value.length < 8) {
-                                        return "Password must be at least 8 characters";
-                                    }
-                                    if (!/[A-Z]/.test(value)) {
-                                        return "Password must contain at least one uppercase letter";
-                                    }
-                                    if (!/[0-9]/.test(value)) {
-                                        return "Password must contain at least one number";
-                                    }
-                                    return null;
-                                }}
                             >
                                 <Label>পাসওয়ার্ড</Label>
-                                <Input variant="secondary" placeholder="কমপক্ষে ৮ অক্ষর" />
+                                <Input variant="secondary" placeholder="আপনার পাসওয়ার্ড লিখুন" />
                                 <FieldError />
                             </TextField>
                         </Fieldset.Group>
