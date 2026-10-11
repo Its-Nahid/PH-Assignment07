@@ -54,15 +54,15 @@ The platform provides actionable insights such as top price risers, top price fa
 
 ## 🛠️ Technologies Used
 
-| Category | Technologies |
-| :--- | :--- |
-| **Framework** | Next.js 16 (App Router with Turbopack) |
-| **Language** | TypeScript |
-| **UI Library** | React 19, HeroUI, Tailwind CSS v4, DaisyUI |
-| **Authentication** | Better Auth, @better-auth/mongo-adapter |
-| **Database** | MongoDB Atlas (Native MongoDB Driver v7) |
+| Category           | Technologies                                  |
+| :----------------- | :-------------------------------------------- |
+| **Framework**      | Next.js 16 (App Router with Turbopack)        |
+| **Language**       | TypeScript                                    |
+| **UI Library**     | React 19, HeroUI, Tailwind CSS v4, DaisyUI    |
+| **Authentication** | Better Auth, @better-auth/mongo-adapter       |
+| **Database**       | MongoDB Atlas (Native MongoDB Driver v7)      |
 | **Icons & Ticker** | Iconify, Gravity UI Icons, react-marquee-text |
-| **Code Quality** | ESLint 9 |
+| **Code Quality**   | ESLint 9                                      |
 
 ---
 
@@ -94,32 +94,40 @@ The platform provides actionable insights such as top price risers, top price fa
 ## ⚙️ Getting Started & Installation
 
 ### Prerequisites
+
 - Node.js (v18.17.0 or higher)
 - npm or pnpm or yarn
 - A free MongoDB Atlas cluster
 
 ### 1. Clone the repository
+
 ```bash
 git clone https://github.com/Its-Nahid/ph-assignment-7.git
 cd ph-assignment-7
 ```
 
 ### 2. Install dependencies
+
 ```bash
 npm install
 ```
 
 ### 3. Setup environment variables
+
 Create a `.env` file in the root directory:
+
 ```bash
 cp .env.example .env
 ```
+
 Fill in your credentials (see the setup guide below).
 
 ### 4. Run the development server
+
 ```bash
 npm run dev
 ```
+
 Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ---

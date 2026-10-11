@@ -5,12 +5,14 @@ import { Icon } from "@iconify/react";
 export default function SocialAuth() {
     const handleGithub = async () => {
         await authClient.signIn.social({
-            provider: "github"
+            provider: "github",
+            callbackURL: "/",
         });
     };
     const handleGoogle = async () => {
         await authClient.signIn.social({
             provider: "google",
+            callbackURL: "/",
         });
     };
     return (
