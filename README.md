@@ -7,8 +7,8 @@
 
 ## 🔗 Live & Repository Links
 
-- **Live Deployment:** [Live Website Link](https://your-project.vercel.app) *(Replace with your live Vercel URL)*
-- **GitHub Repository:** [https://github.com/Its-Nahid/ph-assignment-7](https://github.com/Its-Nahid/ph-assignment-7) *(Replace with your repo URL)*
+- **Live Deployment:** [https://bazar-rose.vercel.app](https://bazar-rose.vercel.app)
+- **GitHub Repository:** [https://github.com/Its-Nahid/PH-Assignment07](https://github.com/Its-Nahid/PH-Assignment07)
 
 ---
 
